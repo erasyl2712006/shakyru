@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сіз шақырылдыңыз!</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ96A4sijpFu_.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('https://fonts.gstatic.com/s/dancingscript/v26/If2RXTr6YS-zF4S-kcSWSVi_svOZCiTo1lI.woff2') format('woff2');
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #e6d3a3);
+            color: #3e2723;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #e6d3a3, #ffffff);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .splash-content {
+            text-align: center;
+            color: #3e2723;
+        }
+
+        .splash-content h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: slideIn 1.5s ease-out;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .splash-content h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            color: #8d6e63;
+        }
+
+        .splash-content p {
+            font-size: 26px;
+            margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .splash-content .ornament {
+            width: 150px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #caa472;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #caa472;
+            margin-bottom: 20px;
+            animation: slideIn 1.5s ease-out;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        a {
+            color: #caa472;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #caa472;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        button {
+            background-color: #caa472;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a98855;
+        }
+
+        .quotes {
+            margin: 40px 0;
+            font-style: italic;
+            color: #5d4037;
+            animation: fadeIn 3s ease-in;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .quotes p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .photo-placeholder {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            border: 2px dashed #caa472;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #caa472;
+        }
+
+        .link-container {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .link-container img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-screen" id="splash">
+        <div class="splash-content">
+            <img src="or.png" alt="Орнамент" class="ornament">
+            <h1>Жанасыл</h1>
+            <h2>1 жас тұсаукесер</h2>
+            <p>2025 жылы 12 қаңтар | 13:00</p>
+            <audio autoplay>
+                <source src="ZHANBOLAT_ZHAZIRA_-_Tsau_keser_61623468.mp3" type="audio/mpeg">
+                Сіздің браузеріңіз аудионы қолдамайды.
+            </audio>
+        </div>
+    </div>
+
+    <div class="container" id="main-content" style="display:none;">
+        <h1>Құрметті қонақтар!</h1>
+        <p>Ағайын-туыс, бауырлар, құда-жекжат, дос-жарандар!</p>
+
+
+        <div class="quotes">
+            <p>"Сіздерді немереміз"</p>
+            <p>"Жанасылдың"</p>
+            <p>"1 жас Тұсаукесер тойына арналған 
+                ақ дастарханымыздың қадірлі қонағы болуға
+                 шақырамыз!"</p>
+        </div>
+        <p><strong>Күні:</strong> 2025 жылы 12 қаңтар
+        <p><strong>Уақыты:</strong> 13:00</p>
+
+        <div class="photo-placeholder">
+            <img src="IMG_6529.JPG" alt="Именинник" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+        </div>
+
+        <div class="link-container">
+            <img src="photo_2024-12-16_13-49-55.jpg" alt="2ГИС эмблемасы">
+            <p><strong>Өтетін орны:</strong> <a href="https://2gis.kz/karaganda/geo/70000001092752054" target="_blank">Улица Абая 27а,Теміртау қаласы</a></p>
+        </div>
+
+        <div class="quotes">
+            <p>Той иелері:</p>
+            <p>Атасы мен әжесі</p>
+
+
+        <form action="https://formspree.io/f/xzzbldok" method="POST">
+            <label for="name">Сіздің атыңыз:</label>
+            <input type="text" id="name" name="name" placeholder="Атыңызды енгізіңіз" required>
+
+            <label for="attendance">Сіз қатысасыз ба?</label>
+            <select id="attendance" name="attendance">
+                <option value="yes">Иә</option>
+                <option value="no">Жоқ</option>
+                <option value="maybe">Мүмкін</option>
+            </select>
+
+            <label for="attendance">Сіз жұбайыңызбен келесізбе?</label>
+            <select id="attendance" name="attendance">
+                <option value="yes">Иә</option>
+                <option value="no">Жоқ</option>
+            </select>
+
+            <button type="submit">Жіберу</button>
+        </form>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('splash').style.animation = 'fadeOut 1s ease-out';
+                setTimeout(function() {
+                    document.getElementById('splash').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                }, 1000);
+            }, 5000);
+        };
+    </script>
+</body>
+</html>
