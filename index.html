@@ -229,6 +229,10 @@
             <img src="photo_2024-12-16_13-49-55.jpg" alt="2ГИС эмблемасы">
             <p><strong>Өтетін орны:</strong> <a href="https://2gis.kz/karaganda/geo/70000001092752054" target="_blank">Улица Абая 27а,Теміртау қаласы</a></p>
         </div>
+        
+            <div class="container" id="main-content" style="display:none;">
+        <h1>Той иелері:</h1>
+        <p>Атасы мен әжесі</p>
 
         <form action="https://formspree.io/f/xzzbldok" method="POST">
             <label for="name">Сіздің атыңыз:</label>
@@ -241,8 +245,11 @@
                 <option value="maybe">Мүмкін</option>
             </select>
 
-            <label for="guests">Егер келсеңіз, өзіңізбен бірге кімдерді алып келесіз?</label>
-            <input type="text" id="guests" name="guests" placeholder="Аттарын енгізіңіз (бар болса)">
+            <label for="attendance">Сіз жұбайыңызбен келесізбе?</label>
+            <select id="attendance" name="attendance">
+                <option value="yes">Иә</option>
+                <option value="no">Жоқ</option>
+            </select>
 
             <button type="submit">Жіберу</button>
         </form>
